@@ -34,14 +34,34 @@ public class Job {
     @Override
     public String toString(){
         String newLine = "\n";//System.lineSeparator();
-        String string = newLine +
-                "ID:  " + this.getId() + newLine +
-                "Name:  " + this.getName() + newLine +
-                "Employer:  " + this.getEmployer() + newLine +
-                "Location:  " + this.getLocation() + newLine +
-                "Position Type:  " + this.getPositionType() + newLine +
-                "Core Competency:  " + this.getCoreCompetency() + newLine;
 
+        int jobId = this.getId();
+        String jobIdString = (jobId == -1) ? "Data not available" : String.valueOf(jobId);
+
+        String jobName = this.getName();
+        String jobNameString = (jobName == null ) ? "Data not available" : String.valueOf(jobName);
+
+        String jobEmployer = this.getEmployer().getValue();
+        String jobEmployerString = (jobEmployer == null ) ? "Data not available" : String.valueOf(jobEmployer);
+
+        String jobLocation = this.getLocation().getValue();
+        String jobLocationString = (jobLocation == null ) ? "Data not available" : String.valueOf(jobLocation);
+
+        String jobPositionType = this.getPositionType().getValue();
+        String jobPositionTypeString = (jobPositionType == null ) ? "Data not available" : String.valueOf(jobPositionType);
+
+
+        String jobCoreCompetency = this.getCoreCompetency().getValue();
+        String jobCoreCompetencyString = (jobCoreCompetency == null ) ? "Data not available" : jobCoreCompetency.toString();
+
+        String string = newLine +
+
+                "ID:  " + jobIdString + newLine +
+                "Name:  " + jobNameString + newLine +
+                "Employer:  " + jobEmployerString + newLine +
+                "Location:  " + jobLocationString + newLine +
+                "Position Type:  " + jobPositionTypeString + newLine +
+                "Core Competency:  " + jobCoreCompetencyString + newLine;
 
         return string;
     }

@@ -80,4 +80,25 @@ public class JobTest {
         assertEquals(expectedString, testJob.toString());
 
     }
+    //Follow the same TDD process for the third requirement, creating a test named testToStringHandlesEmptyField
+    @Test
+
+    public void testToStringHandlesEmptyField(){
+        Job testJob = new Job("Product tester", new Employer("ACME"), new Location(), new PositionType(), new CoreCompetency());
+
+        String expectedString = "\n" +
+                "ID:  " + testJob.getId() + "\n" +
+                "Name:  " + testJob.getName() + "\n" +
+                "Employer:  " + testJob.getEmployer().getValue() + "\n" +
+                "Location:  " + "Data not available" + "\n" +
+                "Position Type:  " + "Data not available" + "\n" +
+                "Core Competency:  " + "Data not available" + "\n";
+
+        assertEquals(expectedString, testJob.toString());
+
+    }
+
+    //3. If a field is empty, the method should add, “Data not available” after the label.
+    //
+    //4. (Optional) If a Job object ONLY contains data for the id field, the method should return, “OOPS! This job does not seem to exist.”
 }
