@@ -50,6 +50,34 @@ public class JobTest {
 
         assertFalse(testJobA.equals(testJobB));
 
+    }
+
+    @Test
+    public void testToStringStartsAndEndsWithNewLine(){
+        Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+         System.out.println(testJob);
+
+        //changed expected from: System.lineSeparator() to  "\n"
+         assertEquals("\n", String.valueOf(testJob.toString().charAt(0)));
+
+
+         //changed expected from: System.lineSeparator() to  "\n"
+         assertEquals("\n", String.valueOf(testJob.toString().charAt(testJob.toString().length()-1)));
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData(){
+        Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String expectedString = "\n" +
+                "ID:  " + testJob.getId() + "\n" +
+                "Name:  " + testJob.getName() + "\n" +
+                "Employer:  " + testJob.getEmployer() + "\n" +
+                "Location:  " + testJob.getLocation() + "\n" +
+                "Position Type:  " + testJob.getPositionType() + "\n" +
+                "Core Competency:  " + testJob.getCoreCompetency() + "\n";
+
+
+        assertEquals(expectedString, testJob.toString());
 
     }
 }
