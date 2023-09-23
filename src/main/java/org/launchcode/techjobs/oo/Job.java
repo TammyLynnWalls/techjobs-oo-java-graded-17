@@ -35,24 +35,19 @@ public class Job {
     public String toString(){
         String newLine = "\n";//System.lineSeparator();
 
-        int jobId = this.getId();
-        String jobIdString = (jobId == -1) ? "Data not available" : String.valueOf(jobId);
+        String jobIdString = (this.getId() == -1) ? "Data not available" : String.valueOf(this.getId());
 
-        String jobName = this.getName();
-        String jobNameString = (jobName == null ) ? "Data not available" : String.valueOf(jobName);
+        String jobNameString = (this.getName() == null ) ? "Data not available" : this.getName();
 
-        String jobEmployer = this.getEmployer().getValue();
-        String jobEmployerString = (jobEmployer == null ) ? "Data not available" : String.valueOf(jobEmployer);
+        String jobEmployerString = (this.getEmployer().getValue() == null ) ? "Data not available" : this.getEmployer().getValue();
 
-        String jobLocation = this.getLocation().getValue();
-        String jobLocationString = (jobLocation == null ) ? "Data not available" : String.valueOf(jobLocation);
+        String jobLocationString = (this.getLocation().getValue() == null ) ? "Data not available" : this.getLocation().getValue();
 
-        String jobPositionType = this.getPositionType().getValue();
-        String jobPositionTypeString = (jobPositionType == null ) ? "Data not available" : String.valueOf(jobPositionType);
+        String jobPositionTypeString = (this.getPositionType().getValue() == null ) ? "Data not available" : this.getPositionType().getValue();
+
+        String jobCoreCompetencyString = (this.getCoreCompetency().getValue() == null ) ? "Data not available" : this.getCoreCompetency().getValue();
 
 
-        String jobCoreCompetency = this.getCoreCompetency().getValue();
-        String jobCoreCompetencyString = (jobCoreCompetency == null ) ? "Data not available" : jobCoreCompetency.toString();
 
         String string = newLine +
 

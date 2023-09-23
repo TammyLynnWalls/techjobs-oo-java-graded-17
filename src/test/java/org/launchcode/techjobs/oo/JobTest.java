@@ -55,7 +55,7 @@ public class JobTest {
     @Test
     public void testToStringStartsAndEndsWithNewLine(){
         Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-         System.out.println(testJob);
+         //System.out.println(testJob);
 
         //changed expected from: System.lineSeparator() to  "\n"
          assertEquals("\n", String.valueOf(testJob.toString().charAt(0)));
