@@ -84,7 +84,7 @@ public class JobTest {
     @Test
 
     public void testToStringHandlesEmptyField(){
-        Job testJob = new Job("Product tester", new Employer("ACME"), new Location(), new PositionType(), new CoreCompetency());
+        Job testJob = new Job("Product tester", new Employer("ACME"), new Location(""), new PositionType(""), new CoreCompetency(""));
 
         String expectedString = "\n" +
                 "ID:  " + testJob.getId() + "\n" +
@@ -98,7 +98,6 @@ public class JobTest {
 
     }
 
-    //3. If a field is empty, the method should add, “Data not available” after the label.
-    //
-    //4. (Optional) If a Job object ONLY contains data for the id field, the method should return, “OOPS! This job does not seem to exist.”
+
+
 }

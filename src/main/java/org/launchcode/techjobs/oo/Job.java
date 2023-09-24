@@ -37,19 +37,25 @@ public class Job {
 
         String jobIdString = (this.getId() == -1) ? "Data not available" : String.valueOf(this.getId());
 
-        String jobNameString = (this.getName() == null ) ? "Data not available" : this.getName();
+        String jobNameString = (this.getName() == "" ) ? "Data not available" : this.getName();
 
-        String jobEmployerString = (this.getEmployer().getValue() == null ) ? "Data not available" : this.getEmployer().getValue();
+        String jobEmployerString = (this.getEmployer().getValue() == "" ) ? "Data not available" : this.getEmployer().getValue();
 
-        String jobLocationString = (this.getLocation().getValue() == null ) ? "Data not available" : this.getLocation().getValue();
+        String jobLocationString = (this.getLocation().getValue() == "" ) ? "Data not available" : this.getLocation().getValue();
 
-        String jobPositionTypeString = (this.getPositionType().getValue() == null ) ? "Data not available" : this.getPositionType().getValue();
+        String jobPositionTypeString = (this.getPositionType().getValue() == "" ) ? "Data not available" : this.getPositionType().getValue();
 
-        String jobCoreCompetencyString = (this.getCoreCompetency().getValue() == null ) ? "Data not available" : this.getCoreCompetency().getValue();
+        String jobCoreCompetencyString = (this.getCoreCompetency().getValue() == "" ) ? "Data not available" : this.getCoreCompetency().getValue();
+
+//        String string;
+//
+//        if(Objects.equals(jobNameString, "Data not available") && Objects.equals(jobEmployerString, "Data not available") && Objects.equals(jobLocationString, "Data not available") && Objects.equals(jobPositionTypeString, "Data not available") && Objects.equals(jobCoreCompetencyString, "Data not available")){
+//            string = "OOPS! This job does not seem to exist.";
+//        }
 
 
 
-        String string = newLine +
+      String string = newLine +
 
                 "ID:  " + jobIdString + newLine +
                 "Name:  " + jobNameString + newLine +
