@@ -53,8 +53,6 @@ public class Job {
 //            string = "OOPS! This job does not seem to exist.";
 //        }
 
-
-
       String string = newLine +
 
                 "ID:  " + jobIdString + newLine +
