@@ -37,15 +37,15 @@ public class Job {
 
         String jobIdString = (this.getId() == -1) ? "Data not available" : String.valueOf(this.getId());
 
-        String jobNameString = (this.getName() == "" ) ? "Data not available" : this.getName();
+        String jobNameString = (Objects.equals(this.getName(), "")) ? "Data not available" : this.getName();
 
-        String jobEmployerString = (this.getEmployer().getValue() == "" ) ? "Data not available" : this.getEmployer().getValue();
+        String jobEmployerString = (Objects.equals(this.getEmployer().getValue(), "")) ? "Data not available" : this.getEmployer().getValue();
 
-        String jobLocationString = (this.getLocation().getValue() == "" ) ? "Data not available" : this.getLocation().getValue();
+        String jobLocationString = (Objects.equals(this.getLocation().getValue(), "")) ? "Data not available" : this.getLocation().getValue();
 
-        String jobPositionTypeString = (this.getPositionType().getValue() == "" ) ? "Data not available" : this.getPositionType().getValue();
+        String jobPositionTypeString = (Objects.equals(this.getPositionType().getValue(), "")) ? "Data not available" : this.getPositionType().getValue();
 
-        String jobCoreCompetencyString = (this.getCoreCompetency().getValue() == "" ) ? "Data not available" : this.getCoreCompetency().getValue();
+        String jobCoreCompetencyString = (Objects.equals(this.getCoreCompetency().getValue(), "")) ? "Data not available" : this.getCoreCompetency().getValue();
 
 //        String string;
 //
