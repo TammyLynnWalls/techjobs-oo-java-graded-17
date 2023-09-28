@@ -21,7 +21,7 @@ public class JobTest {
         String jobName = testJob.getName();
         String employerName = testJob.getEmployer().getValue();
         String jobLocation = testJob.getLocation().getValue();
-        String jobPostionType = testJob.getPositionType().getValue();
+        String jobPositionType = testJob.getPositionType().getValue();
         String jobCoreCompetency = testJob.getCoreCompetency().getValue();
 
 
@@ -34,7 +34,7 @@ public class JobTest {
         assertEquals("Desert", jobLocation);
         assertTrue(testJob.getLocation() instanceof Location);
 
-        assertEquals("Quality control", jobPostionType);
+        assertEquals("Quality control", jobPositionType);
         assertTrue(testJob.getPositionType() instanceof PositionType);
 
         assertEquals("Persistence", jobCoreCompetency);
@@ -63,18 +63,20 @@ public class JobTest {
 
          //changed expected from: System.lineSeparator() to  "\n"
          assertEquals("\n", String.valueOf(testJob.toString().charAt(testJob.toString().length()-1)));
-    }
+    }//"\n"
 
     @Test
     public void testToStringContainsCorrectLabelsAndData(){
         Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        String expectedString = "\n" +
-                "ID:  " + testJob.getId() + "\n" +
-                "Name:  " + testJob.getName() + "\n" +
-                "Employer:  " + testJob.getEmployer() + "\n" +
-                "Location:  " + testJob.getLocation() + "\n" +
-                "Position Type:  " + testJob.getPositionType() + "\n" +
-                "Core Competency:  " + testJob.getCoreCompetency() + "\n";
+        String newLine = "\n";
+
+        String expectedString = newLine +
+                "ID:  " + testJob.getId() + newLine +
+                "Name:  " + testJob.getName() + newLine +
+                "Employer:  " + testJob.getEmployer() + newLine +
+                "Location:  " + testJob.getLocation() + newLine +
+                "Position Type:  " + testJob.getPositionType() + newLine +
+                "Core Competency:  " + testJob.getCoreCompetency() + newLine;
 
 
         assertEquals(expectedString, testJob.toString());
@@ -85,14 +87,14 @@ public class JobTest {
 
     public void testToStringHandlesEmptyField(){
         Job testJob = new Job("Product tester", new Employer("ACME"), new Location(""), new PositionType(""), new CoreCompetency(""));
-
-        String expectedString = "\n" +
-                "ID:  " + testJob.getId() + "\n" +
-                "Name:  " + testJob.getName() + "\n" +
-                "Employer:  " + testJob.getEmployer().getValue() + "\n" +
-                "Location:  " + "Data not available" + "\n" +
-                "Position Type:  " + "Data not available" + "\n" +
-                "Core Competency:  " + "Data not available" + "\n";
+        String newLine = "\n";
+        String expectedString = newLine +
+                "ID:  " + testJob.getId() + newLine +
+                "Name:  " + testJob.getName() + newLine +
+                "Employer:  " + testJob.getEmployer().getValue() + newLine +
+                "Location:  " + "Data not available" + newLine +
+                "Position Type:  " + "Data not available" + newLine +
+                "Core Competency:  " + "Data not available" + newLine;
 
         assertEquals(expectedString, testJob.toString());
 

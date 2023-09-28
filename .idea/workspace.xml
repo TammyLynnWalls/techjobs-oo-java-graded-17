@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="created abstract class and extended the four job field classes from it, fixed unit test to test for empty string, not null">
+    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="just want to try pushing and running the auto grader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +225,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695590370152</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated the job toString to use equals instead of ==">
+      <option name="closed" value="true" />
+      <created>1695694344320</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695694344320</updated>
+    </task>
+    <task id="LOCAL-00010" summary="just want to try pushing and running the auto grader">
+      <option name="closed" value="true" />
+      <created>1695694618683</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695694618683</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -237,6 +253,8 @@
     <MESSAGE value="created and passed testToStringHandlesEmptyField" />
     <MESSAGE value="simplified job toString" />
     <MESSAGE value="created abstract class and extended the four job field classes from it, fixed unit test to test for empty string, not null" />
-    <option name="LAST_COMMIT_MESSAGE" value="created abstract class and extended the four job field classes from it, fixed unit test to test for empty string, not null" />
+    <MESSAGE value="updated the job toString to use equals instead of ==" />
+    <MESSAGE value="just want to try pushing and running the auto grader" />
+    <option name="LAST_COMMIT_MESSAGE" value="just want to try pushing and running the auto grader" />
   </component>
 </project>
